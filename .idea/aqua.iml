@@ -34,6 +34,7 @@
       <sourceFolder url="file://$MODULE_DIR$/vendor/sensio/framework-extra-bundle" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/vendor/doctrine/collections/lib" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/vendor/sensiolabs/security-checker" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/var/cache" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/annotations" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/cache" />
@@ -48,6 +49,8 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/orm" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/incenteev/composer-parameter-handler" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/jdorn/sql-formatter" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/knplabs/knp-markdown-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/michelf/php-markdown" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/monolog/monolog" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/paragonie/random_compat" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/psr/cache" />
@@ -108,6 +111,8 @@
           <root url="file://$MODULE_DIR$/vendor/doctrine/orm" />
           <root url="file://$MODULE_DIR$/vendor/incenteev/composer-parameter-handler" />
           <root url="file://$MODULE_DIR$/vendor/jdorn/sql-formatter" />
+          <root url="file://$MODULE_DIR$/vendor/knplabs/knp-markdown-bundle" />
+          <root url="file://$MODULE_DIR$/vendor/michelf/php-markdown" />
           <root url="file://$MODULE_DIR$/vendor/monolog/monolog" />
           <root url="file://$MODULE_DIR$/vendor/paragonie/random_compat" />
           <root url="file://$MODULE_DIR$/vendor/psr/cache" />
@@ -144,6 +149,8 @@
           <root url="file://$MODULE_DIR$/vendor/doctrine/orm" />
           <root url="file://$MODULE_DIR$/vendor/incenteev/composer-parameter-handler" />
           <root url="file://$MODULE_DIR$/vendor/jdorn/sql-formatter" />
+          <root url="file://$MODULE_DIR$/vendor/knplabs/knp-markdown-bundle" />
+          <root url="file://$MODULE_DIR$/vendor/michelf/php-markdown" />
           <root url="file://$MODULE_DIR$/vendor/monolog/monolog" />
           <root url="file://$MODULE_DIR$/vendor/paragonie/random_compat" />
           <root url="file://$MODULE_DIR$/vendor/psr/cache" />

@@ -7,6 +7,7 @@ imports:
 # http://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
     locale: en
+    cache_type: file_system
 
 framework:
     #esi:             ~
@@ -21,12 +22,13 @@ framework:
     #serializer:      { enable_annotations: true }
     templating:
         engines: ['twig']
+        #assets_version: SomeVersionScheme
     default_locale:  "%locale%"
     trusted_hosts:   ~
     trusted_proxies: ~
     session:
-        # http://symfony.com/doc/current/reference/configuration/framework.html#handler-id
-        handler_id:  session.handler.native_file
+        # handler_id set to null will use default session handler from php.ini
+        handler_id:  ~
         save_path:   "%kernel.root_dir%/../var/sessions/%kernel.environment%"
     fragments:       ~
     http_method_override: true
@@ -36,6 +38,8 @@ framework:
 twig:
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
+    number_format:
+       thousands_separator: ','
 
 # Doctrine Configuration
 doctrine:
@@ -66,3 +70,10 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
+
+doctrine_cache:
+    providers:
+      my_markdown_cache:
+        type: "%cache_type%"
+        file_system:
+          directory: "%kernel.cache_dir%/markdown_cache"
