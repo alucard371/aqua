@@ -46,7 +46,7 @@ class GenusController extends Controller
         $em = $this->getDoctrine()->getManager();
         dump($em->getRepository('AppBundle:Genus'));
         $genuses = $em->getRepository('AppBundle:Genus')
-            ->findAllPublishedOrderBySize();
+            ->findAllPublishedOrderByRecentlyActive();
 
         return $this->render('genus/list.html.twig', ['genuses' => $genuses, ]);
     }
@@ -78,10 +78,8 @@ class GenusController extends Controller
         $this->get('logger')
             ->info('Showing genus: '.$genusName);
 
-        $recentNotes = $genus->getNotes()
-            ->filter(function(GenusNote $note) {
-                return $note->getCreatedAt() > new \DateTime('-3 months');
-            });
+        $recentNotes = $em->getRepository('AppBundle:GenusNote')
+            ->findAllRecentNotesForGenus($genus);
 
 
         return $this->render('genus/show.html.twig', array(
